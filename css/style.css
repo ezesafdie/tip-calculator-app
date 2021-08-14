@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+
+/* Variables */
+:root {
+  --dark-cyan: hsl(183, 100%, 15%);
+  --grayish-cyan: hsl(186, 14%, 43%);
+  --highlight-color: hsl(172, 66%, 45%);
+  --background: hsl(185, 41%, 84%);
+  --input-color: hsl(199, 52%, 96%);
+  --alternative-text: hsl(181, 32%, 36%);
+  --active-input: hsl(165, 32%, 78%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  padding: 0;
+  border: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Space Mono", monospace;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: var(--background);
+}
+
+.header__img {
+  margin: 20px;
+}
+
+main {
+  width: 100%;
+  height: calc(100vh - 40px - 54px);
+  background-color: var(--background);
+}
+
+.container {
+  width: 100%;
+  height: calc(100vh - 40px - 54px);
+  background-color: var(--white);
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+
+.form__row {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.input {
+  background-color: var(--input-color);
+  border-radius: 5px;
+  width: 78%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 5px;
+  text-align: right;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--dark-cyan);
+  box-sizing: content-box;
+  border: 3px solid transparent;
+}
+
+.input:focus {
+  outline: none;
+  border: 3px solid var(--alternative-text);
+}
+
+#bill,
+#quantity {
+  background: url(../images/icon-dollar.svg) no-repeat scroll 7px
+    calc(100% - 17px);
+  background-color: var(--input-color);
+  align-self: center;
+  justify-self: center;
+  display: flex;
+}
+
+#quantity {
+  background: url(../images/icon-person.svg) no-repeat scroll 7px
+    calc(100% - 17px);
+  background-color: var(--input-color);
+}
+
+.container__label {
+  width: 80%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+label {
+  font-weight: 700;
+  color: var(--grayish-cyan);
+  padding-bottom: 5px;
+}
+
+.label__tip {
+  margin-bottom: -15px;
+}
+
+.button__section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form__row-button {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.button_percentage,
+.input_percentage {
+  background-color: var(--dark-cyan);
+  width: 47%;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 24px;
+  color: white;
+}
+
+.button_percentage:active {
+  background-color: var(--highlight-color);
+  color: var(--dark-cyan);
+}
+
+.buttonActive {
+  background-color: var(--highlight-color);
+  color: var(--dark-cyan);
+}
+
+.input_percentage {
+  background-color: var(--input-color);
+  border-radius: 5px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--dark-cyan);
+  box-sizing: content-box;
+}
+
+.input_percentage:active {
+  outline-color: var(--dark-cyan);
+}
+
+.input_percentage:focus {
+  outline-color: var(--dark-cyan);
+}
+
+.inputActive {
+  background-color: var(--highlight-color);
+  color: var(--dark-cyan);
+  outline: none;
+}
+
+.form__row--resume {
+  width: 80%;
+  background-color: var(--dark-cyan);
+  border-radius: 15px;
+  margin-bottom: 30px;
+}
+
+.resume__line {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+}
+
+.resume__line--first {
+  padding-top: 40px;
+}
+
+.resume__line--last {
+  padding-bottom: 35px;
+}
+
+.resume__description {
+  font-weight: 600;
+  color: var(--white);
+  font-size: 1.15rem;
+}
+
+.resume__person {
+  color: var(--alternative-text);
+  font-weight: 600;
+}
+
+.resume__value {
+  color: var(--highlight-color);
+}
+
+.resume__button {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
+.button-reset {
+  width: 85%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: var(--highlight-color);
+  color: var(--dark-cyan);
+  font-size: 24px;
+  font-weight: 700;
+  border-radius: 8px;
+}
+
+#total::after {
+  content: attr(totalNumber);
+}
+
+#amount::after {
+  content: attr(amountNumber);
+}

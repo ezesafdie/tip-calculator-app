@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+    <title>Tip Calculator App</title>
+  </head>
+  <body>
+    <header class="header">
+      <img src="images/logo.svg" alt="" class="header__img" />
+    </header>
+
+    <main>
+      <div class="container">
+        <form action="">
+          <div class="form__row">
+            <div class="container__label"><label for="bill">Bill</label></div>
+            <input type="number" name="bill" id="bill" class="input" />
+          </div>
+
+          <div class="form__row">
+            <div class="container__label">
+              <label for="" class="label__tip">Select Tip %</label>
+            </div>
+            <div class="button__section">
+              <div class="form__row-button">
+                <button class="button_percentage" onclick="return false" id="5">
+                  5%
+                </button>
+                <button
+                  class="button_percentage"
+                  onclick="return false"
+                  id="10"
+                >
+                  10%
+                </button>
+              </div>
+              <div class="form__row-button">
+                <button
+                  class="button_percentage"
+                  onclick="return false"
+                  id="15"
+                >
+                  15%
+                </button>
+                <button
+                  class="button_percentage"
+                  onclick="return false"
+                  id="20"
+                >
+                  20%
+                </button>
+              </div>
+              <div class="form__row-button">
+                <button
+                  class="button_percentage"
+                  onclick="return false"
+                  id="25"
+                >
+                  25%
+                </button>
+                <input
+                  type="number"
+                  class="input_percentage"
+                  placeholder="Custom"
+                  id="custom"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="form__row">
+            <div class="container__label">
+              <label for="quantity">Number of People</label>
+            </div>
+            <input
+              type="number"
+              name="quantity"
+              id="quantity"
+              class="input"
+              min="1"
+            />
+          </div>
+
+          <div class="form__row">
+            <div class="form__row--resume">
+              <div class="resume__line resume__line--first">
+                <div class="resume__left">
+                  <p class="resume__description">Tip Amount</p>
+                  <p class="resume__person">/ person</p>
+                </div>
+                <div class="resume__right">
+                  <h1 class="resume__value" id="amount">$</h1>
+                </div>
+              </div>
+              <div class="resume__line resume__line--last">
+                <div class="resume__left">
+                  <p class="resume__description">Total</p>
+                  <p class="resume__person">/ person</p>
+                </div>
+                <div class="resume__right">
+                  <h1 class="resume__value" id="total">$</h1>
+                </div>
+              </div>
+              <div class="resume__button">
+                <button type="reset" class="button-reset" id="reset">
+                  RESET
+                </button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
