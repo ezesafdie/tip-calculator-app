@@ -9,6 +9,7 @@
   --input-color: hsl(199, 52%, 96%);
   --alternative-text: hsl(181, 32%, 36%);
   --active-input: hsl(165, 32%, 78%);
+  --hover-button: hsl(185, 41%, 83%);
   --white: hsl(0, 0%, 100%);
 }
 
@@ -29,6 +30,10 @@
 
 .header__img {
   margin: 20px;
+}
+
+.image-desktop {
+  display: none;
 }
 
 main {
@@ -227,4 +232,85 @@ label {
 
 #amount::after {
   content: attr(amountNumber);
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* DESKTOP VERSION */
+@media screen and (min-width: 1025px) {
+  .image-desktop {
+    display: block;
+    margin-bottom: 40px;
+  }
+
+  .header {
+    display: none;
+  }
+
+  button:hover {
+    background-color: var(--hover-button);
+    cursor: pointer;
+    color: var(--dark-cyan);
+  }
+
+  main {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container {
+    width: 90%;
+    justify-self: center;
+    height: 500px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .options {
+    width: 50%;
+  }
+
+  .resume {
+    width: 50%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: space-between;
+  }
+
+  .resume .form__row {
+    height: 100%;
+  }
+
+  .form__row--resume {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .container {
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  .container {
+    width: 50%;
+  }
 }
